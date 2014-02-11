@@ -136,6 +136,7 @@ input[type="submit"] {
 .email {
 	margin: 0 auto;
 	margin-top: 10%;
+	margin-bottom: 10%;
 	padding: 2.5%;
 	background: #FF6600;
 	color: white;
@@ -156,7 +157,7 @@ input[type="submit"] {
 	}
 
 	h2 {
-		font-size: 1.25em;
+		font-size: 1.15em;
 	}
 
 	input {
