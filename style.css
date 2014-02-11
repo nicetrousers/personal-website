@@ -1,0 +1,221 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#container {
+	width: 90%;
+	max-width: 512px; 
+	margin: 0 auto;
+}
+
+
+
+body {
+	text-align: center; 
+	background: #FFFFFF;
+	color: #333333;
+	font-family: helvetica, arial, sans;
+}
+
+h1 {
+	font-weight: bold;
+	font-family: helvetica, arial, sans-serif;
+	color: #2A8195;
+	text-decoration: none;
+}
+
+h2 {
+	font-family: garamond, georgia, serif;
+	color: #2A8195;
+}
+
+p {
+	font-size:22px;
+}
+
+a {
+	border-style: none;
+}
+
+img {
+	border-style: none;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+ text-decoration: none;
+  border: 0 none;
+}
+
+.header {
+	margin-top: 15%;
+	width: 100%;
+}
+
+.links {
+	margin-top: 10%;
+	width: 100%;
+	padding: 2.5% 0 2.5% 0;
+	background-color: #CFCFCF;
+
+}
+
+.icon {
+	display: inline;
+	border: none;
+	border-style: none;
+  text-decoration: none;
+}
+
+.icon img {
+	margin: 0.78125%;
+	width: 12.5%;
+  border: 0 none;
+}
+
+.contact {
+	margin-top: 10%;
+}
+
+input[type="email"] {
+ 		border: solid 1px #CFCFCF;  
+ }
+input[type="submit"] {
+	background: #FF6600;
+	 border: solid 1px #FF6600;  
+	color: white;	
+}
+
+.email {
+	margin: 0 auto;
+	margin-top: 10%;
+	padding: 2.5%;
+	background: #FF6600;
+	color: white;
+	font-weight: lighter;
+	font-family: helvetica, arial, sans-serif;
+	}
+
+.email a {
+	color: white;
+}
+
+/* small screen style -------- */
+
+@media only screen and (max-width : 380px) {
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	h2 {
+		font-size: 1.25em;
+	}
+
+	input {
+		padding: 0.6em;
+		font-size: 0.95em;
+	}
+
+	.email {
+		width: 30%;
+		font-size: 1.1em;
+		letter-spacing: 0.02em;
+	}
+
+}
+
+/* medium screen style -------- */
+
+
+@media only screen and (min-width : 381px) and (max-width : 500px) {
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	input {
+		padding: 0.625em;
+		font-size: 1em;
+	}
+
+	.email {
+		width: 26%;
+		font-size: 1.2em;
+		letter-spacing: 0.015em;
+	}
+}
+
+/* desktop screen style -------- */
+
+@media only screen and (min-width : 501px) {
+
+	h1 {
+		font-size: 4em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+	input {
+		padding: 0.625em;
+		font-size: 1.125em;
+	}
+
+	.email {
+		width: 25%;
+		font-size: 1.5em;
+		letter-spacing: 0.02em;
+	}
+}
