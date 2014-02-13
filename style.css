@@ -94,6 +94,19 @@ a {
   border: 0 none;
 }
 
+.top-nav {
+	margin-top: 1%;
+	width: 100%;
+	padding: 1% 2.5% 1% 2.5%;
+	background-color: #CFCFCF;
+	position: fixed;
+  top: 0px;
+}
+
+.email a {
+	color: white;
+}
+
 .header {
 	margin-top: 5%;
 	width: 100%;
