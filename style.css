@@ -95,8 +95,14 @@ a {
 }
 
 .header {
-	margin-top: 15%;
+	margin-top: 5%;
 	width: 100%;
+}
+
+.image {
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 33%;
 }
 
 .links {
