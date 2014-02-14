@@ -94,27 +94,63 @@ a {
   border: 0 none;
 }
 
-.top-nav {
-	margin-top: 1%;
+.header {
 	width: 100%;
-	padding: 1% 2.5% 1% 2.5%;
-	background-color: #CFCFCF;
 	position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+	max-width: 512px;
+	width: 90%;
+	display: inline-block;
+	float: center;
+	margin: 0 auto;
+  background-color: #CFCFCF; 
+}
+
+
+.nav li {
+	display: inline-block;
+	float: center;
+	padding: 2% 4%;
+	/*	background-color: #2A8195; */
+	color: white;
+	font-family: helvetica, arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+
+.nav a:link {
+	color: white;
+}
+
+.nav a:active {
+	color: #FF6600;
+}
+
+.nav a:visited {
+	color: white;
+}
+
+.nav a:hover {
+	color: #2A8195;
 }
 
 .email a {
 	color: white;
 }
 
-.header {
+.headline {
 	margin-top: 5%;
 	width: 100%;
 }
 
 .image {
 	margin: 0 auto;
-	margin-top: 10%;
+	margin-top: 15%;
 	width: 33%;
 }
 
@@ -141,6 +177,15 @@ a {
 
 .contact {
 	margin-top: 10%;
+}
+
+.section-head {
+	margin-top: 10%;
+	height: 10%;
+	width: 100%;
+	padding: 2.5% 0 2.5% 0;
+	background-color: #CFCFCF;
+
 }
 
 input[type="email"] {
@@ -190,6 +235,11 @@ input[type="submit"] {
 		letter-spacing: 0.02em;
 	}
 
+	.nav li {
+		font-size: 0.8em;
+		letter-spacing: 0.04em;
+	}
+
 }
 
 /* medium screen style -------- */
@@ -215,6 +265,12 @@ input[type="submit"] {
 		font-size: 1.2em;
 		letter-spacing: 0.015em;
 	}
+
+	.nav li {
+		font-size: 1em;
+		letter-spacing: 0.05em;
+	}
+
 }
 
 /* desktop screen style -------- */
@@ -237,5 +293,10 @@ input[type="submit"] {
 		width: 25%;
 		font-size: 1.5em;
 		letter-spacing: 0.02em;
+	}
+
+	.nav li {
+		font-size: 1.1em;
+		letter-spacing: 0.06em;
 	}
 }
