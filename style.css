@@ -66,13 +66,13 @@ body {
 h1 {
 	font-weight: bold;
 	font-family: helvetica, arial, sans-serif;
-	color: #375D81;
+	color: #2A8195;
 	text-decoration: none;
 }
 
 h2 {
 	font-family: garamond, georgia, serif;
-	color: #37465d;
+	color: #2A8195;
 }
 
 p {
@@ -103,7 +103,7 @@ a {
 	margin-top: 10%;
 	width: 100%;
 	padding: 2.5% 0 2.5% 0;
-	background-color: #C4D7ED;
+	background-color: #CFCFCF;
 
 }
 
@@ -133,7 +133,7 @@ input[type="submit"] {
 	margin-top: 10%;
 	margin-bottom: 10%;
 	padding: 2.5%;
-	background: #375D81;
+	background: #2A8195;
 	color: white;
 	font-weight: lighter;
 	font-family: helvetica, arial, sans-serif;
