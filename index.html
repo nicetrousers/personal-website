@@ -8,53 +8,56 @@
 		<![endif]-->
     <title>Keith Laidlaw: Front End Developer and Web Producer </title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="fonts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- <script src="script.js"></script> -->
   </head>
   <body>
-    <header>
-      <h1>Keith Laidlaw</h1>
-      <p>Front end developer and web producer</p>
-		</header>
+    <div class="page-wrapper">
 
-	  <main>
-      <div class="bio">
-        <h2>About me</h2>
-        <p>I'm a skilled front-end developer fluent in HTML5/CSS3, JavaScript/jQuery, and WordPress/PHP. I turn raw ideas into beautiful, accessible web experiences – and I'm available for work!
-        </p>
-      </div>
-    
-      <div class="contact">
+      <header>
+        <h1>
+          <span class="head-name">Keith Laidlaw</span>
+          <span class="head-description">Front end developer and <span class="nowrap">web producer</span></span>
+        </h1>
+      </header>
 
+      <main>
 
-        <div class="icon">		
-          <a href="http://www.linkedin.com/in/keithlaidlaw" target="_blank">
-          <img src="images/linkedin.png" alt="LinkedIn" title="LinkedIn">
-          </a>
-        </div>
-        
-      
-        <div class="icon">
-          <a href="https://github.com/scribacious" target="_blank">
-          <img src="images/octocat.png" alt="GitHub logo" title="GitHub" >
-          </a>
-        </div>
-        
-        <div class="icon">
-          <a href="http://twitter.com/scribacious" target="_blank">
-          <img src="images/twitter.png" alt="Twitter" title="Twitter">
-          </a>
-        </div>
+        <section class="bio" id="bio">
+          <h2>About me</h2>
+          <p>I'm a skilled front-end developer fluent in HTML5/CSS3, JavaScript/jQuery, and WordPress/PHP. <span class="nowrap">I turn</span> raw ideas into beautiful, accessible web experiences – and I'm available for work!
+          </p>
+        </section>
 
-        <div class="email">
-          <a href="mailto:mail@keithlaidlaw.com" title="mail@keithlaidlaw.com" alt="mail@keithlaidlaw.com" target="_blank">
-            <img src="images/email.png" alt="Email me" title="Email me">
-            Email me</a>
-        </div>
-    
-      </div>
-      
-    </main>
+        <section class="contacts" id="contacts">
+          <h2>Contact</h2>
 
+          <div class="contact-buttons">		
+            <a href="http://www.linkedin.com/in/keithlaidlaw">
+              <img src="http://www.keithlaidlaw.com/images/linkedin-120-circle.png" alt="LinkedIn" title="LinkedIn">
+            </a>
+            <a href="https://github.com/nicetrousers">
+              <img src="http://www.keithlaidlaw.com/images/github-120.png" alt="GitHub logo" title="GitHub" >
+            </a>
+            <a href="http://twitter.com/scribacious">
+              <img src="http://www.keithlaidlaw.com/images/twitter-120-circle.png" alt="Twitter" title="Twitter">
+            </a>
+            <a href="mailto:mail@keithlaidlaw.com" title="mail@keithlaidlaw.com" alt="mail@keithlaidlaw.com" target="_blank">
+              <img src="http://www.keithlaidlaw.com/images/email-120-circle-gray.png" alt="Email me" title="Email me">  
+            </a>
+          </div>
+        </section>
 
+        <section class="resume" id="resume">
+          <h2>My resume</h2>
+          <p><a href="http://www.keithlaidlaw.com/files/Keith-Laidlaw-Resume.pdf" target="_blank" class="resume-link">PDF format (opens in new window)</a></p>
+          </p>
+        </section>
+
+      </main>
+
+    </div>
   </body>
 </html>
