@@ -99,6 +99,10 @@ h2 {
 }
 p {
   line-height: 1.5;
+  margin-bottom: 20px;
+}
+p:last-child {
+  margin-bottom: 0;
 }
 p a,
 p a:visited {
@@ -147,6 +151,10 @@ a.resume-link:hover:after {
 }
 .nowrap {
   white-space: nowrap;
+}
+img.tiger-pic {
+  max-width: 50%;
+  border-radius: 50%;
 }
 
 @media screen, print {
