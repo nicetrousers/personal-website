@@ -106,25 +106,28 @@ p:last-child {
 }
 p a,
 p a:visited {
-  color: #222;
+  color: #0050B9;
 }
 a.resume-link {
   position: relative;
+  text-decoration: none;
+  border-bottom: 1px solid #0050B9;
 }
 a.resume-link::after {
- content: url(http://www.keithlaidlaw.com/images/open_in_new.svg);
+ content: url(images/open_in_new_blue.svg);
  position: absolute;
  top: 1px;
 }
 p a:focus, 
 p a:active,
 p a:hover {
-  color: #0050B9;
+  color: #6f6f6f;
+  border-bottom: 1px solid #6f6f6f;
 }
 a.resume-link:focus:after,
 a.resume-link:active:after,
 a.resume-link:hover:after {
-  content: url(http://www.keithlaidlaw.com/images/open_in_new_blue.svg);
+  content: url(images/open_in_new_gray.svg);
  }
 .contact-buttons {
   font-size: 0;
@@ -137,11 +140,15 @@ a.resume-link:hover:after {
   width: calc(25% - 15px);
   margin-right: calc(10px);
   max-width: 3.25em;
+  padding-bottom: 4px;
+
 }
 .contact-buttons a:focus,
 .contact-buttons a:active,
 .contact-buttons a:hover {
   opacity: 0.8;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #6f6f6f;
 }
 .contact-buttons a:last-child {
   margin-right: 0;
