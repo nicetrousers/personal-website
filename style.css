@@ -181,6 +181,7 @@ img.tiger-pic {
     }
     h1 {
       width: 100%;
+      margin-bottom: 0;
     }
     h1 > span {
       padding-right: 40px;
