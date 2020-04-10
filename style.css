@@ -54,6 +54,7 @@ body {
   font-size: 16px;
   line-height: 1.2;
   font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
 }
 .page-wrapper {
 	width: 100%;
@@ -69,7 +70,6 @@ body {
 h1, h2, h3 {
 	font-family: 'Open Sans', sans-serif;
   color: #222;
-  font-weight: 200;
 	text-decoration: none;
 }
 h1 {
