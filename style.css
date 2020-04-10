@@ -60,10 +60,10 @@ body {
 	max-width: 72em; 
 	margin: 20px auto;
 }
-header, section, footer {
+.page-header, .page-section, .page-footer {
   padding: 0 20px;
 }
-header, section, footer {
+.page-header, .page-section, .page-footer {
   margin-bottom: 20px;
 }
 h1, h2, h3 {
@@ -162,17 +162,17 @@ img.tiger-pic {
     html, body, .page-wrapper {
       height: 100%;
     }
-    .page-wrapper, header, main {
+    .page-wrapper, .page-header, .page-main {
       display: flex;
     }
     .page-wrapper {
       margin: 0 auto;
     }
-    header, main {
+    .page-header, .page-main {
       flex-direction: column;
       justify-content: center;
     }
-    header {
+    .page-header, .page-main {
       border-right: 1px solid #A4A4A4;
       padding-right: 0;
       margin:  0;
@@ -186,11 +186,11 @@ img.tiger-pic {
     h1 > span {
       padding-right: 40px;
     }
-    main section {
+    .page-main .page-section {
       padding-left: 40px;
       margin-bottom: 40px;
     }
-    main section:last-child {
+    .page-main .page-section:last-child {
       margin-bottom: 0;
     }
   }
