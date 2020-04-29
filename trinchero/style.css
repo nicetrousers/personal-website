@@ -48,8 +48,26 @@ table {
 /* end reset */
 
 
+body {
+  position: fixed;
+}
+body.no-js, body.clicked {
+  position: static;
+}
+.agegate {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .95;
+}
 .no-js .agegate,
 .clicked .agegate {
   display: none;
 }
-
+.agegate-box {
+  background: #fff;
+  margin: 20px; 
+  padding: 20px;
+  text-align: center;
+}
