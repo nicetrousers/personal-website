@@ -22,10 +22,9 @@
           docBody[0].classList.remove('no-js');
         }
 
-        const agegate = document.getElementById('clp-enter');
+        const agegate = document.getElementById('clp_enter');
         agegate.onclick = function() {
           docBody[0].classList.add('clicked');
-          console.log('agegate');
         }
 
       });
@@ -34,11 +33,11 @@
 
   </head>
   <body class="no-js">
-    <div class="agegate" id="agegate">
-      <div class="agegate-box">
-        <h2 class="clp-logo">Complicated</h2>
+    <div class="clp-agegate" id="clp_agegate">
+      <div class="clp-agegate-dialog">
+        <img src="http://www.keithlaidlaw.com/trinchero/images/CP-BW-Logo.png" alt="Complicated" class="clp-logo">
         <p>By entering the site you are verfiying you are of legal <span class="nowrap">drinking age.</span></p>
-        <button class="clp-enter" id="clp-enter">Enter</button>
+        <button type="button" class="clp-enter" id="clp_enter">Enter</button>
       </div>
     </div>
     <div class="clp-wrapper">
