@@ -14,12 +14,29 @@
     </script>
     <![endif]-->
 
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const docBody = document.getElementsByTagName('body'); 
+        if (docBody[0].classList.contains('no-js')) {
+          docBody[0].classList.remove('no-js');
+        }
+
+        const agegate = document.getElementById('clp-enter');
+        agegate.onclick = function() {
+          docBody[0].classList.add('clicked');
+          console.log('agegate');
+        }
+
+      });
+
+    </script>
+
   </head>
   <body class="no-js">
     <div class="agegate" id="agegate">
       <h2 class="clp-logo">Complicated</h2>
       <p>By entering the site you are verfiying you are of legal drinking age</p>
-      <button class="clp-enter">Enter</button>
+      <button class="clp-enter" id="clp-enter">Enter</button>
     </div>
     <div class="clp-wrapper">
 

@@ -46,3 +46,10 @@ table {
 	border-spacing: 0;
 }
 /* end reset */
+
+
+.no-js .agegate,
+.clicked .agegate {
+  display: none;
+}
+
