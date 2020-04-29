@@ -71,3 +71,6 @@ body.no-js, body.clicked {
   padding: 20px;
   text-align: center;
 }
+.nowrap {
+  white-space: nowrap;
+}
