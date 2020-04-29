@@ -48,8 +48,13 @@ table {
 /* end reset */
 
 
+
 body {
   position: fixed;
+  font-family: 'PT Serif', serif;
+}
+h1, h2, blockquote {
+  font-family: 'Poppins', sans-serif;
 }
 body.no-js, body.clicked {
   position: static;
@@ -71,6 +76,21 @@ body.no-js, body.clicked {
   padding: 20px;
   text-align: center;
 }
+
+.clp-header,
+.clp-hero,
+.clp-footer {
+  background: #5e1e20;
+  color: #fff;
+  padding: 20px;
+}
+.clp-hero {
+  background: #5e1e20 url(http://www.keithlaidlaw.com/trinchero/images/hero.jpg) right top no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+
 .nowrap {
   white-space: nowrap;
 }
