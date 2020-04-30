@@ -17,8 +17,8 @@
     <![endif]-->
 
     <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-        const docBody = document.getElementsByTagName('body'); 
+      document.addEventListener('DOMContentLoaded', function(event) {
+        var docBody = document.getElementsByTagName('body'); 
         if (docBody[0].classList.contains('no-js')) {
           docBody[0].classList.remove('no-js');
           if (checkClickCookie()) userHasClicked() ;
@@ -26,27 +26,27 @@
 
         function checkClickCookie() {
           if (document.cookie.split(';').some(function(item) {
-            return item.trim().indexOf('clickCookie') == 0
+            return item.trim().indexOf('clickCookie') == 0;
           })) { return true; }
         }
 
-        const agegate = document.getElementById('clp_enter');
+        var agegate = document.getElementById('clp_enter');
         agegate.onclick = function() {
           document.cookie = "clickCookie; max-age = 115200; expires = Fri, 31 Dec 2020 23:59:59 GMT";
           userHasClicked();
-        }
+        };
 
         function userHasClicked() {
           docBody[0].classList.add('clicked');
         }
 
-        const docNav = document.getElementById('clp_nav'); 
+        var docNav = document.getElementById('clp_nav'); 
         docNav.classList.add('is-closed');
-        const navBtn = document.getElementById('clp_mobileNavButton'); 
-        const navMenu = document.getElementById('clp_navMenu'); 
+        var navBtn = document.getElementById('clp_mobileNavButton'); 
+        var navMenu = document.getElementById('clp_navMenu'); 
         navBtn.setAttribute('aria-expanded','false');
         navBtn.hidden = 'false';
-        navMenu.hidden = 'true'
+        navMenu.hidden = 'true';
         navBtn.onclick = function() {
           var expanded = this.getAttribute('aria-expanded') === 'true';
           this.setAttribute('aria-expanded', String(!expanded));
