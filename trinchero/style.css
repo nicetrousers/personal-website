@@ -276,6 +276,16 @@ img {
 .clp-wine, .clp-philosophy {
   background-color: #fff;
 }
+
+
+.clp-wine .clp-content {
+  max-width: 76em;
+  margin: 0 auto;
+}
+.clp-wine .clp-section-text,
+.clp-wine .clp-figure {
+  font-size: 0;
+}
 .clp-wine .clp-figure {
   background-color: #57080a;
   background: linear-gradient(90deg, #57080a 60%, #9d3129 60%);
@@ -289,7 +299,7 @@ img {
   padding: 16px 0; 
 }
 .clp-section-text {
-  padding: 20px 0;
+  padding: 20px;
 }
 .clp-section-text h2 span {
   display: block;
@@ -303,12 +313,11 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-  width: 2em; 
-  height: 3.5em;
+  width: 32px; 
+  height: 56px;
   margin: 16px 0;
   content:"";
 }
-
 .clp-wine-head {
   line-height: 1.4;
   font-weight: 600;
@@ -325,6 +334,7 @@ img {
 }
 .buynow-cta {
   display: inline-block;
+  width: max-content;
   background: #5e1e20;
   color: #fff;
   font-family: 'Poppins', sans-serif;
@@ -340,6 +350,49 @@ img {
 .buynow-cta:active,
 .buynow-cta:focus {
   opacity: 0.8;
+}
+@media (min-width: 40em) {
+  .clp-wine .clp-section-text,
+  .clp-wine .clp-figure {
+    vertical-align: top;
+    width: 45%;
+  }
+  .clp-wine .clp-figure {
+    float:left;
+  }
+  .clp-wine .clp-section-text {
+    margin-left: 10%;
+    float:right
+  }
+  .clp-wine:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .clp-wine {
+    padding-bottom: 10% ;
+  }
+  .clp-wine .clp-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .clp-wine .clp-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 63em) {
+  .clp-wine .clp-figure,
+  .clp-wine .clp-section-text {
+    width: 35%;
+  }
+  .clp-wine .clp-section-text {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
 }
 
 .clp-philosophy .clp-content {
@@ -395,11 +448,6 @@ img {
 @media (min-width: 53em) {
   .clp-philosophy .clp-content {
     padding: 0 20px;
-  }
-  .clp-philosophy:after {
-    content: "";
-    display: table;
-    clear: both;
   }
   .clp-philosophy .clp-section-text,
   .clp-philosophy .clp-figure {
