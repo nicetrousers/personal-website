@@ -46,8 +46,9 @@ table {
 	border-spacing: 0;
 }
 /* end reset */
-
-
+* {
+  box-sizing: border-box;
+}
 
 body {
   overflow: hidden;
@@ -55,12 +56,12 @@ body {
   background: #5e1e20;
   color: #233543;
 }
-
+body.no-js, 
+body.clicked {
+  overflow: visible;
+}
 h1, h2 {
   font-family: 'Poppins', sans-serif;
-}
-body.no-js, body.clicked {
-  overflow: visible;
 }
 img {
   max-width: 100%;
@@ -75,7 +76,6 @@ img {
   justify-content: center;  
   z-index: 999;
 }
-
 .no-js .clp-agegate,
 .clicked .clp-agegate {
   display: none;
@@ -173,8 +173,8 @@ img {
   z-index: 10;
   top: 36px;
   right: 0;
-  margin-top: 16px;
-  padding: 16px 32px 32px 32px;
+  margin-top: 24px;
+  padding: 8px 32px 32px 32px;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -192,7 +192,7 @@ img {
 }
 .clp-mobileNavButton {
   position: absolute;
-  top: 16px;
+  top: 27px;
   right: 32px;
   background-color: transparent;
   background-image: url('http://www.keithlaidlaw.com/trinchero/images/close-white-18dp.svg');
@@ -291,18 +291,18 @@ img {
 }
 @media (min-width: 33em) {
   .clp-hero h1 {
-    max-width: 75%;
+    max-width: 85%;
   }
 }
-@media (min-width: 40em) {
+@media (min-width: 41em) {
   .clp-hero .clp-content {
     background-size: 150%;
     padding-bottom: 150%;
   }
   .clp-hero h1 {
-    font-size: 48px;
-    font-size: 3rem;
-    max-width: 60%;
+    font-size: 44px;
+    font-size: 2.75rem;
+    max-width: 65%;
   }
   .clp-hero-quote {
     max-width: 75%;
@@ -334,10 +334,10 @@ img {
     height: 65em;
   }
   .clp-hero h1 {
-    font-size: 64px;
-    font-size: 4rem;
+    font-size: 60px;
+    font-size: 3.75rem;
     padding-top: 84px;
-    max-width: 50%;
+    max-width: 55%;
   }
   .clp-hero-quote {
     margin-bottom: 72px;
@@ -348,8 +348,9 @@ img {
     height: 70em;
   }
   .clp-hero h1 {
-    font-size: 72px;
-    font-size: 4.5rem;
+    font-size: 68px;
+    font-size: 4.25rem;
+    max-width: 60%;
   }
   .clp-hero-quote {
     max-width: 60%;
@@ -413,6 +414,7 @@ img {
 .buynow-cta {
   display: inline-block;
   width: max-content;
+  text-align: center; /* for IE11 */
   background: #5e1e20;
   color: #faeddd;
   font-family: 'Poppins', sans-serif;
@@ -441,11 +443,6 @@ img {
   .clp-wine .clp-section-text {
     margin-left: 10%;
     float:right
-  }
-  .clp-wine:after {
-    content: "";
-    display: table;
-    clear: both;
   }
   .clp-wine {
     padding-bottom: 10% ;
@@ -524,7 +521,7 @@ img {
     max-width: 38em;
   }
 }
-@media (min-width: 53em) {
+@media (min-width: 55em) {
   .clp-philosophy .clp-content {
     padding: 0 32px;
   }
@@ -539,6 +536,9 @@ img {
     max-width: 100%;
     margin-right: 10%
   }
+  .clp-philosophy .clp-section-text P {
+    margin-bottom: 0;
+  }
   .clp-philosophy .clp-figure {
     height: auto;
     padding-bottom: 0;
@@ -549,6 +549,7 @@ img {
   }
   .clp-philosophy .clp-figure img {
     margin-top: 0;
+    max-height: 100%;
   }
   .clp-philosophy .clp-content {
     display: flex;
@@ -560,11 +561,6 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  .clp-philosophy .clp-figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
   }
 }
 @media (min-width: 63em) {
@@ -642,10 +638,11 @@ a.clp-makers-link {
     display: inline-block;
   }
 }
-@media (min-width: 53em) {
+@media (min-width: 63em) {
   .clp-footer-flex {
     display: flex;
     justify-content: space-between;  
+    align-items: flex-start;
     align-items: start;
   }
   .clp-footer .clp-logo {
@@ -654,8 +651,9 @@ a.clp-makers-link {
   .clp-footer-contact {
     margin: 32px 0 32px;
   }
-}
-@media (min-width: 63em) {
+  .clp-footer-contact:first-of-type {
+    margin: 32px 64px;
+  }
   .clp-footer .clp-logo {
     max-width: 32em;
   }
@@ -663,4 +661,10 @@ a.clp-makers-link {
 
 .nowrap {
   white-space: nowrap;
+}
+.clp-wine .clp-content:after,
+.clp-philosophy .clp-content:after {
+  content: "";
+  display: table;
+  clear: both;
 }
