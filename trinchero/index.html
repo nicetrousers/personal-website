@@ -20,10 +20,22 @@
         const docBody = document.getElementsByTagName('body'); 
         if (docBody[0].classList.contains('no-js')) {
           docBody[0].classList.remove('no-js');
+          if (checkClickCookie()) userHasClicked() ;
+        }
+
+        function checkClickCookie() {
+          if (document.cookie.split(';').some(function(item) {
+            return item.trim().indexOf('clickCookie') == 0
+          })) { return true; }
         }
 
         const agegate = document.getElementById('clp_enter');
         agegate.onclick = function() {
+          document.cookie = "clickCookie; max-age = 115200; expires = Fri, 31 Dec 2020 23:59:59 GMT";
+          userHasClicked();
+        }
+
+        function userHasClicked() {
           docBody[0].classList.add('clicked');
         }
 
@@ -43,7 +55,6 @@
           } else {
             docNav.classList.add('is-closed');
           }
-          console.log('clicks');
         };
       });
 
@@ -70,7 +81,7 @@
             </button>
             <ul class="clp-nav-links" id="clp_navMenu">
               <li><a href="#">Product</a></li>
-              <li><a href="#clp-philosophy">Philosophy</a></li>
+              <li><a href="#clp_philosophy">Philosophy</a></li>
               <li><a href="#">Winemaking</a></li>
               <li><a href="#">Region</a></li>
             </ul>
