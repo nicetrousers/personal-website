@@ -54,10 +54,7 @@ body {
   font-family: 'PT Serif', serif;
   background: #5e1e20;
 }
-.clp-footer .clp-content {
-  max-width: 74em;
-  margin: 0 auto;
-}
+
 h1, h2 {
   font-family: 'Poppins', sans-serif;
 }
@@ -292,7 +289,7 @@ img {
   padding: 16px 0; 
 }
 .clp-section-text {
-  padding: 20px;
+  padding: 20px 0;
 }
 .clp-section-text h2 span {
   display: block;
@@ -345,6 +342,10 @@ img {
   opacity: 0.8;
 }
 
+.clp-philosophy .clp-content {
+  max-width: 76em;
+  margin: 0 auto;
+}
 .clp-philosophy .clp-figure {
   height: 0;
   padding-bottom: 100%;
@@ -353,6 +354,9 @@ img {
 }
 .clp-philosophy .clp-figure img {
   margin-top: -25%;
+}
+.clp-philosophy .clp-section-text {
+  padding: 20px;
 }
 .clp-philosophy-tag {
   display: block;
@@ -373,7 +377,6 @@ img {
   margin: 16px 0 0;
   content:"";
 }
-
 .clp-philosophy-head {
   line-height: 1.4;
   font-weight: 600;
@@ -384,7 +387,70 @@ img {
 .clp-philosophy p {
   margin-bottom: 32px;
 }
-
+@media (min-width: 40em) {
+  .clp-philosophy .clp-section-text {
+    max-width: 38em;
+  }
+}
+@media (min-width: 53em) {
+  .clp-philosophy .clp-content {
+    padding: 0 20px;
+  }
+  .clp-philosophy:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .clp-philosophy .clp-section-text,
+  .clp-philosophy .clp-figure {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+  }
+  .clp-philosophy .clp-section-text {
+    padding: 0 20px;
+  }
+  .clp-philosophy .clp-figure {
+    height: auto;
+    padding-bottom: 0;
+    overflow: visible;
+    margin-right: -20px;
+    margin-bottom: -8px;
+    float: right;
+  }
+  .clp-philosophy .clp-figure img {
+    margin-top: 0;
+  }
+  .clp-philosophy .clp-content {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+  }
+  .clp-philosophy .clp-section-text {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .clp-philosophy .clp-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+@media (min-width: 63em) {
+  .clp-philosophy .clp-figure {
+    width: 35%;
+  }
+}
+.clp-footer { 
+  position: relative;
+  z-index: 1;
+}
+.clp-footer .clp-content {
+  max-width: 76em;
+  margin: 0 auto;
+}
 .clp-footer .clp-logo {
   display: block;
   margin: 38px 0 48px;
@@ -405,8 +471,7 @@ img {
   margin-bottom: 48px;
 }
 .clp-footer-contact-details,
-.clp-footer-contact a,
-.clp-footer-subfooter {
+.clp-footer-contact a {
   font-size: 20px;
   font-size: 1.25rem;
 }
@@ -430,7 +495,7 @@ a.text-link:focus {
 a.clp-makers-link {
   text-transform: uppercase;
 }
-@media (min-width: 40em) {
+@media (min-width: 24em) {
   .clp-footer-contact {
     display: inline-block;
   }
