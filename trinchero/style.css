@@ -50,14 +50,19 @@ table {
 
 
 body {
-  position: fixed;
+  overflow: hidden;
   font-family: 'PT Serif', serif;
+  background: #5e1e20;
+}
+.clp-footer .clp-content {
+  max-width: 74em;
+  margin: 0 auto;
 }
 h1, h2 {
   font-family: 'Poppins', sans-serif;
 }
 body.no-js, body.clicked {
-  position: static;
+  overflow: visible;
 }
 img {
   max-width: 100%;
@@ -271,6 +276,9 @@ img {
   padding: 0 20px;
 }
 
+.clp-wine, .clp-philosophy {
+  background-color: #fff;
+}
 .clp-wine .clp-figure {
   background-color: #57080a;
   background: linear-gradient(90deg, #57080a 60%, #9d3129 60%);
@@ -378,10 +386,11 @@ img {
 }
 
 .clp-footer .clp-logo {
-  margin: 32px 0 48px;
+  display: block;
+  margin: 38px 0 48px;
+  width: 100%;
+  max-width: 28em;
 }
-
-
 .clp-footer-head {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
@@ -391,6 +400,8 @@ img {
   margin-bottom: 16px;
 }
 .clp-footer-contact {
+  vertical-align: top;
+  margin-right: 40px;
   margin-bottom: 48px;
 }
 .clp-footer-contact-details,
@@ -419,11 +430,30 @@ a.text-link:focus {
 a.clp-makers-link {
   text-transform: uppercase;
 }
+@media (min-width: 40em) {
+  .clp-footer-contact {
+    display: inline-block;
+  }
+}
+@media (min-width: 53em) {
+  .clp-footer-flex {
+    display: flex;
+    justify-content: space-between;  
+    align-items: start;
+  }
+  .clp-footer .clp-logo {
+    display: inline-block;
+  }
+  .clp-footer-contact {
+    margin: 32px 0 32px;
+  }
+}
+@media (min-width: 63em) {
+  .clp-footer .clp-logo {
+    max-width: 32em;
+  }
+}
 
 .nowrap {
   white-space: nowrap;
 }
-
-/* #57080a
-#9d3129 */
-
