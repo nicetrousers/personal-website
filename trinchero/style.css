@@ -268,7 +268,7 @@ img {
 }
 .clp-hero-quote {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 600;
   font-size: 24px;
   font-size: 1.5rem;
@@ -347,6 +347,10 @@ img {
   .clp-hero .clp-content {
     height: 70em;
   }
+  .clp-hero h1 {
+    font-size: 72px;
+    font-size: 4.5rem;
+  }
   .clp-hero-quote {
     max-width: 60%;
     left: 20%;
@@ -358,15 +362,14 @@ img {
   background-color: #fffcf7;
 }
 .clp-wine .clp-content {
-  max-width: 76em;
+  max-width: 90em;
   margin: 0 auto;
 }
 .clp-wine .clp-figure {
   background-color: #57080a;
-  background: linear-gradient(90deg, #57080a 60%, #9d3129 60%);
-  text-align:center;
-  /background-image: -webkit-linear-gradient( 90deg, #57080a 60%, #9d3129 60%);
-  background: linear-gradient(90deg, #57080a 60%, #9d3129 60%);
+  text-align: center;
+  background-image: -webkit-linear-gradient( 90deg, #57080a 72%, #9d3129 72%);
+  background: linear-gradient(90deg, #57080a 72%, #9d3129 72%);
 }
 .clp-wine .clp-figure img {
   max-width: 50%;
@@ -394,7 +397,7 @@ img {
   content:"";
 }
 .clp-wine-head {
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 600;
   font-size: 32px;
   font-size: 2rem;
@@ -419,7 +422,7 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2em;
-  margin: 32px 0 16px;
+  margin: 64px 0 16px;
 }
 .buynow-cta:hover,
 .buynow-cta:active,
@@ -472,7 +475,7 @@ img {
   background-color: #fffcf7;
 }
 .clp-philosophy .clp-content {
-  max-width: 76em;
+  max-width: 90em;
   margin: 0 auto;
 }
 .clp-philosophy .clp-figure {
@@ -507,7 +510,7 @@ img {
   content:"";
 }
 .clp-philosophy-head {
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 600;
   font-size: 32px;
   font-size: 2rem;
@@ -627,6 +630,9 @@ a.text-link:active,
 a.text-link:focus {
   padding-bottom: 0;
   border-bottom: 1px solid #faeddd;
+}
+.clp-footer .separator {
+  margin: 0 .5em;
 }
 a.clp-makers-link {
   text-transform: uppercase;
