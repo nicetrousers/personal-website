@@ -53,6 +53,7 @@ body {
   overflow: hidden;
   font-family: 'PT Serif', serif;
   background: #5e1e20;
+  color: #233543;
 }
 
 h1, h2 {
@@ -80,9 +81,9 @@ img {
   display: none;
 }
 .clp-agegate-dialog {
-  background: #fff;
+  background: #fffcf7;
   max-width: 80%;
-  margin: 20px; 
+  margin: 16px; 
   padding: 16px;
   text-align: center;
   font-weight: 300;
@@ -102,7 +103,7 @@ img {
 .clp-enter {
   border: none;
   background: #5e1e20;
-  color: #fff;
+  color: #faeddd;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -153,11 +154,11 @@ img {
 .clp-hero,
 .clp-footer {
   background: #5e1e20;
-  color: #fff;
+  color: #faeddd;
 }
 .clp-header,
 .clp-footer {
-  padding: 20px;
+  padding: 32px;
 }
 
 .clp-nav .clp-logo {
@@ -173,7 +174,7 @@ img {
   top: 36px;
   right: 0;
   margin-top: 16px;
-  padding: 8px 20px 12px 12px;
+  padding: 16px 32px 32px 32px;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -192,7 +193,7 @@ img {
 .clp-mobileNavButton {
   position: absolute;
   top: 16px;
-  right: 20px;
+  right: 32px;
   background-color: transparent;
   background-image: url('http://www.keithlaidlaw.com/trinchero/images/close-white-18dp.svg');
   background-size: contain;
@@ -207,22 +208,22 @@ img {
   background-image: url('http://www.keithlaidlaw.com/trinchero/images/menu-white-18dp.svg');
 }
 .clp-nav li {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .clp-nav li:last-child {
   margin-bottom: 0;
 }
 .clp-nav a {
   text-decoration: none;
-  color: #fff;
+  color: #faeddd;
   padding-left: .2em;
 }
 .clp-nav a:focus,
 .clp-nav a:hover,
 .clp-nav a:active {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #faeddd;
 }
-@media (min-width: 50em) {
+@media (min-width: 55em) {
   .clp-nav {
     position: relative;
   }
@@ -242,7 +243,7 @@ img {
     display: inline-block;
     font-size: 17.6px;
     font-size: 1.1rem;
-    margin-left: .5em
+    margin-left: 2em
   } 
 }
 
@@ -263,7 +264,7 @@ img {
   font-size: 2rem;
   line-height: 1.4;
   font-weight: 600;
-  padding: 20px;
+  padding: 32px;
 }
 .clp-hero-quote {
   font-family: 'Poppins', sans-serif;
@@ -276,7 +277,7 @@ img {
   left: 0;
   bottom: 0;
   margin: 0;
-  padding: 20px;
+  padding: 32px;
 }
 @media (min-width: 27em) {
   .clp-hero h1 {
@@ -353,8 +354,8 @@ img {
   }
 }
 
-.clp-wine, .clp-philosophy {
-  background-color: #fff;
+.clp-wine {
+  background-color: #fffcf7;
 }
 .clp-wine .clp-content {
   max-width: 76em;
@@ -373,7 +374,7 @@ img {
   padding: 16px 0; 
 }
 .clp-section-text {
-  padding: 20px;
+  padding: 32px;
 }
 .clp-section-text h2 span {
   display: block;
@@ -410,7 +411,7 @@ img {
   display: inline-block;
   width: max-content;
   background: #5e1e20;
-  color: #fff;
+  color: #faeddd;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -418,7 +419,7 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2em;
-  margin: 32px 0;
+  margin: 32px 0 16px;
 }
 .buynow-cta:hover,
 .buynow-cta:active,
@@ -465,9 +466,11 @@ img {
   .clp-wine .clp-section-text {
     margin: 0 17%;
   }
-
 }
 
+.clp-philosophy {
+  background-color: #fffcf7;
+}
 .clp-philosophy .clp-content {
   max-width: 76em;
   margin: 0 auto;
@@ -482,7 +485,7 @@ img {
   margin-top: -25%;
 }
 .clp-philosophy .clp-section-text {
-  padding: 20px;
+  padding: 32px;
 }
 .clp-philosophy-tag {
   display: block;
@@ -520,7 +523,7 @@ img {
 }
 @media (min-width: 53em) {
   .clp-philosophy .clp-content {
-    padding: 0 20px;
+    padding: 0 32px;
   }
   .clp-philosophy .clp-section-text,
   .clp-philosophy .clp-figure {
@@ -529,7 +532,7 @@ img {
   }
   .clp-philosophy .clp-section-text {
     float: left;
-    padding: 0 20px;
+    padding: 0 32px;
     max-width: 100%;
     margin-right: 10%
   }
@@ -537,7 +540,7 @@ img {
     height: auto;
     padding-bottom: 0;
     overflow: visible;
-    margin-right: -20px;
+    margin-right: -32px;
     margin-bottom: -8px;
     float: right;
   }
@@ -550,7 +553,7 @@ img {
     justify-content: space-between;
   }
   .clp-philosophy .clp-section-text {
-    padding: 20px 0;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -614,7 +617,7 @@ img {
 }
 a.text-link,
 a.text-link:visited {
-  color: #fff;
+  color: #faeddd;
   text-decoration: none;
   padding-bottom: 1px;
 }
@@ -623,7 +626,7 @@ a.text-link:hover,
 a.text-link:active,
 a.text-link:focus {
   padding-bottom: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #faeddd;
 }
 a.clp-makers-link {
   text-transform: uppercase;
