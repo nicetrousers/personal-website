@@ -27,6 +27,24 @@
           docBody[0].classList.add('clicked');
         }
 
+        const docNav = document.getElementById('clp_nav'); 
+        docNav.classList.add('is-closed');
+        const navBtn = document.getElementById('clp_mobileNavButton'); 
+        const navMenu = document.getElementById('clp_navMenu'); 
+        navBtn.setAttribute('aria-expanded','false');
+        navBtn.hidden = 'false';
+        navMenu.hidden = 'true'
+        navBtn.onclick = function() {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          navMenu.hidden = expanded;
+          if (docNav.classList.contains('is-closed')) {
+            docNav.classList.remove('is-closed');
+          } else {
+            docNav.classList.add('is-closed');
+          }
+          console.log('clicks');
+        };
       });
 
     </script>
@@ -43,9 +61,11 @@
     <div class="clp-wrapper">
 
       <header class="clp-header">
-        <nav class="clp-nav">
+        <nav class="clp-nav" id="clp_nav">
           <img src="http://www.keithlaidlaw.com/trinchero/images/CP-W-Logo.png" alt="Complicated" class="clp-logo">
-          <ul>
+          <button id="clp_mobileNavButton" class="clp-mobileNavButton" type="button"  aria-controls="menuList" aria-label="show navigation">
+          </button>
+          <ul class="clp-nav-links" id="clp_navMenu">
             <li><a href="#">Product</a></li>
             <li><a href="#clp-philosophy">Philosophy</a></li>
             <li><a href="#">Winemaking</a></li>
