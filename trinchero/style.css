@@ -155,20 +155,32 @@ img {
   display: none;
 }
 .clp-nav-links {
+  background-color: #5e1e20;
+  position: absolute;
+  z-index: 10;
+  top: 36px;
+  right: 0;
   margin-top: 16px;
+  padding: 8px 20px 12px 12px;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   line-height: 1.75;
   text-align: right;
+  box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+}
+.no-js .clp-nav-links {
+  position: static;
+  display: block;
+  box-shadow: none;
 }
 .is-closed .clp-nav-links {
-  display:none;
+  display: none;
 }
 
 .clp-mobileNavButton {
   position: absolute;
-  top: 20px;
+  top: 16px;
   right: 20px;
   background-color: transparent;
   background-image: url('http://www.keithlaidlaw.com/trinchero/images/close-white-18dp.svg');
@@ -183,6 +195,12 @@ img {
 .is-closed .clp-mobileNavButton {
   background-image: url('http://www.keithlaidlaw.com/trinchero/images/menu-white-18dp.svg');
 }
+.clp-nav li {
+  margin-bottom: 8px;
+}
+.clp-nav li:last-child {
+  margin-bottom: 0;
+}
 .clp-nav a {
   text-decoration: none;
   color: #fff;
@@ -194,19 +212,20 @@ img {
   border-bottom: 1px solid #fff;
 }
 @media (min-width: 50em) {
-
-  .clp-mobileNavButton {
-    display: none; 
-  }
   .clp-nav {
     position: relative;
   }
-  .clp-nav ul {
+  .clp-mobileNavButton {
+    display: none; 
+  }
+  .clp-nav ul.clp-nav-links {
+    box-shadow: none;
+    padding: 0;
     display: inline-block;
     margin-top: 0;
     right: 0;
     position: absolute;
-    top: -6px;
+    top: -4px;
   }
   .clp-nav ul li {
     display: inline-block;
