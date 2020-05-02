@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Complicated Wine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+    <script>
+      'article aside header footer main nav section figure figcaption time'.replace(/\w+/g,function(n){document.createElement(n)})
+    </script>
+    <![endif]-->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        var docBody = document.getElementsByTagName('body'); 
+        if (docBody[0].classList.contains('no-js')) {
+          docBody[0].classList.remove('no-js');
+          if (checkClickCookie()) userHasClicked() ;
+        }
+
+        function checkClickCookie() {
+          if (document.cookie.split(';').some(function(item) {
+            return item.trim().indexOf('clickCookie') == 0;
+          })) { return true; }
+        }
+
+        var agegate = document.getElementById('clp_enter');
+        agegate.onclick = function() {
+          document.cookie = "clickCookie; max-age = 115200; expires = Fri, 31 Dec 2020 23:59:59 GMT";
+          userHasClicked();
+        };
+
+        function userHasClicked() {
+          docBody[0].classList.add('clicked');
+        }
+
+        var docNav = document.getElementById('clp_nav'); 
+        docNav.classList.add('is-closed');
+        var navBtn = document.getElementById('clp_mobileNavButton'); 
+        var navMenu = document.getElementById('clp_navMenu'); 
+        navBtn.setAttribute('aria-expanded','false');
+        navBtn.hidden = 'false';
+        navMenu.hidden = 'true';
+        navBtn.onclick = function() {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          navMenu.hidden = expanded;
+          if (docNav.classList.contains('is-closed')) {
+            docNav.classList.remove('is-closed');
+          } else {
+            docNav.classList.add('is-closed');
+          }
+        };
+      });
+
+    </script>
+
+  </head>
+  <body class="no-js">
+
+    <div class="clp-agegate" id="clp_agegate">
+      <div class="clp-agegate-dialog">
+        <img src="http://www.keithlaidlaw.com/trinchero/images/CP-BW-Logo.png" alt="Complicated" class="clp-logo">
+        <p>By entering the site you are verfiying you are of legal <span class="nowrap">drinking age.</span></p>
+        <button type="button" class="clp-enter" id="clp_enter">Enter</button>
+      </div>
+    </div>
+
+    <div class="clp-wrapper">
+
+      <header class="clp-header">
+        <div class="clp-content">
+          <nav class="clp-nav" id="clp_nav">
+            <img src="http://www.keithlaidlaw.com/trinchero/images/CP-W-Logo.png" alt="Complicated" class="clp-logo">
+            <button id="clp_mobileNavButton" class="clp-mobileNavButton" type="button"  aria-controls="clp_navMenu" aria-label="navigation menu">
+            </button>
+            <ul class="clp-nav-links" id="clp_navMenu">
+              <li><a href="#">Product</a></li>
+              <li><a href="#clp_philosophy">Philosophy</a></li>
+              <li><a href="#">Winemaking</a></li>
+              <li><a href="#">Region</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="clp-main">
+
+        <section class="clp-hero" id="clp-hero">
+          <div class="clp-content">
+            <h1>
+              Good wine doesn’t have to be complicated
+            </h1>
+            <blockquote class="clp-hero-quote">
+              Pullquote ipsum dolor sit amet consectetur adipicising elit sed do quisquam placerat.
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="clp-wine" id="clp_wine">
+          <div class="clp-content">
+
+            <figure class="clp-figure">
+              <img src="http://www.keithlaidlaw.com/trinchero/images/Complicated_bottle_shot_Pinot.png" alt="Complicated Pinot Noir 2018">
+            </figure>
+            
+            <div class="clp-section-text">
+              <h2>
+                <span class="clp-wine-head">Pinot Noir</span> 
+                <span class="clp-wine-subhead">2018 Monterey County, CA</span>
+              </h2>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ducimus architecto vitae totam a nisi nemo earum ex omnis asperiores! Rerum commodi consequatur architecto aspernatur aliquid nobis cumque doloremque pariatur.</p>
+              <a class="buynow-cta" href="#">Buy now</a>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="clp-philosophy" id="clp_philosophy">
+          <div class="clp-content">
+
+            <figure class="clp-figure">
+              <img src="http://www.keithlaidlaw.com/trinchero/images/image_03.jpg" alt="">
+            </figure>
+            <div class="clp-section-text">
+              <span class="clp-philosophy-tag">Philosophy</span>
+              <h2 class="clp-philosophy-head">Longform headline ipsum dolor sit amet consectetur adipisicing elit sed do.</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam aspernatur officia aliquid? Labore alias non ea doloribus, est saepe unde animi earum architecto incidunt, veritatis explicabo cumque nesciunt aspernatur impedit.
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="clp-footer">
+        <div class="clp-content">
+
+          <div class="clp-footer-flex">
+
+            <img src="http://www.keithlaidlaw.com/trinchero/images/CP-W-Logo.png" alt="Complicated" class="clp-logo">
+
+            <div class="clp-footer-contact">
+              <h2 class="clp-footer-head">Visit us</h2>
+              <span class="clp-footer-contact-details">
+                1234 Any Street<br />
+                City, State 00000
+              </span>
+            </div>
+
+            <div class="clp-footer-contact">
+              <h2 class="clp-footer-head">Contact</h2>
+              <a class="text-link" href="tel:+1-555-555-5555" aria-label="5 5 5. 5 5 5. 5 5 5 5.">555-555-5555</a><br>
+              <a class="text-link" href="mailto:email@url.com">email@url.com</a>
+            </div>
+          </div>
+
+          <p class="clp-footer-subfooter">
+            2020 &copy; All Rights Reserved <span class="separator">|</span> <a class="text-link" href="#"><span class="nowrap">Privacy Policy</span></a> <span class="separator">|</span> <a class="text-link clp-makers-link" href="http://www.keithlaidlaw.com"><span class="nowrap">Made by Makers</span></a>
+          </p>
+        </div>
+
+      </footer>
+
+    </div>
+  </body>
+</html>

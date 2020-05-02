@@ -1,0 +1,670 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'PT Serif', serif;
+  background: #5e1e20;
+  color: #233543;
+}
+body.no-js, 
+body.clicked {
+  overflow: visible;
+}
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+img {
+  max-width: 100%;
+}
+.clp-agegate {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  z-index: 999;
+}
+.no-js .clp-agegate,
+.clicked .clp-agegate {
+  display: none;
+}
+.clp-agegate-dialog {
+  background: #fffcf7;
+  max-width: 80%;
+  margin: 16px; 
+  padding: 16px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.clp-agegate-dialog .clp-logo {
+  width: 100%;
+  max-width: 10em;
+  margin-bottom: 32px;
+}
+.clp-agegate-dialog p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+}
+.clp-enter {
+  border: none;
+  background: #5e1e20;
+  color: #faeddd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: .5em 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.clp-enter:hover,
+.clp-enter:active,
+.clp-enter:focus {
+  opacity: 0.8;
+}
+@media (min-width: 20em) {
+  .clp-agegate-dialog { 
+    padding: 32px;
+    margin: 54px 32px;
+  }
+}
+@media (min-width: 30em) {
+  .clp-agegate-dialog { 
+    max-width: 65%; 
+    margin: 54px auto;
+
+  }
+}
+@media (min-width: 40em) {
+  .clp-agegate-dialog {
+    margin: 72px auto;
+    width: 50%;
+    max-width: 30em;
+    padding: 64px;
+  }
+  .clp-agegate-dialog .clp-logo {
+    max-width: 15em;
+    margin-bottom: 64px;
+  }
+  .clp-agegate-dialog p { 
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+  .clp-enter { 
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+.clp-header,
+.clp-hero,
+.clp-footer {
+  background: #5e1e20;
+  color: #faeddd;
+}
+.clp-header,
+.clp-footer {
+  padding: 32px;
+}
+
+.clp-nav .clp-logo {
+  max-width: 10em;
+}
+.no-js .clp-mobileNavButton {
+  display: none;
+}
+.clp-nav-links {
+  background-color: #5e1e20;
+  position: absolute;
+  z-index: 10;
+  top: 36px;
+  right: 0;
+  margin-top: 24px;
+  padding: 8px 32px 32px 32px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.75;
+  text-align: right;
+  box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+}
+.no-js .clp-nav-links {
+  position: static;
+  display: block;
+  box-shadow: none;
+}
+.is-closed .clp-nav-links {
+  display: none;
+}
+.clp-mobileNavButton {
+  position: absolute;
+  top: 27px;
+  right: 32px;
+  background-color: transparent;
+  background-image: url('http://www.keithlaidlaw.com/trinchero/images/close-white-18dp.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 3em; 
+  height: 3em;
+  content:"";
+  border: none;
+}
+.is-closed .clp-mobileNavButton {
+  background-image: url('http://www.keithlaidlaw.com/trinchero/images/menu-white-18dp.svg');
+}
+.clp-nav li {
+  margin-bottom: 16px;
+}
+.clp-nav li:last-child {
+  margin-bottom: 0;
+}
+.clp-nav a {
+  text-decoration: none;
+  color: #faeddd;
+  padding-left: .2em;
+}
+.clp-nav a:focus,
+.clp-nav a:hover,
+.clp-nav a:active {
+  border-bottom: 1px solid #faeddd;
+}
+@media (min-width: 55em) {
+  .clp-nav {
+    position: relative;
+  }
+  .clp-mobileNavButton {
+    display: none; 
+  }
+  .clp-nav ul.clp-nav-links {
+    box-shadow: none;
+    padding: 0;
+    display: inline-block;
+    margin-top: 0;
+    right: 0;
+    position: absolute;
+    top: -4px;
+  }
+  .clp-nav ul li {
+    display: inline-block;
+    font-size: 17.6px;
+    font-size: 1.1rem;
+    margin-left: 2em
+  } 
+}
+
+
+
+.clp-hero .clp-content {
+  max-width: 76em;
+  margin: 0 auto;
+  background: #5e1e20 url(http://www.keithlaidlaw.com/trinchero/images/hero.jpg) no-repeat;
+  background-size: 200%;
+  background-position: 80% 5em;
+  height: 0;
+  padding-bottom: 200%;
+  position: relative;
+}
+.clp-hero h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 600;
+  padding: 32px;
+}
+.clp-hero-quote {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 32px;
+}
+@media (min-width: 27em) {
+  .clp-hero h1 {
+    font-size: 44px;
+    font-size: 2.75rem;
+  }
+  .clp-hero-quote {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 33em) {
+  .clp-hero h1 {
+    max-width: 85%;
+  }
+}
+@media (min-width: 41em) {
+  .clp-hero .clp-content {
+    background-size: 150%;
+    padding-bottom: 150%;
+  }
+  .clp-hero h1 {
+    font-size: 44px;
+    font-size: 2.75rem;
+    max-width: 65%;
+  }
+  .clp-hero-quote {
+    max-width: 75%;
+    left: 12.5%;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 50em) {
+  .clp-hero .clp-content {
+    background-size: 100%;
+    background-position-y: 100%;
+    padding-bottom: 0;  
+    height: 50em;
+  }
+  .clp-hero h1 {
+    padding-top: 54px;
+  }
+}
+@media (min-width: 56em) {
+  .clp-hero .clp-content {
+    height: 55em;
+  }
+  .clp-hero h1 {
+    max-width: 50%;
+  }
+}
+@media (min-width: 63em) {
+  .clp-hero .clp-content {
+    height: 65em;
+  }
+  .clp-hero h1 {
+    font-size: 60px;
+    font-size: 3.75rem;
+    padding-top: 84px;
+    max-width: 55%;
+  }
+  .clp-hero-quote {
+    margin-bottom: 72px;
+  }
+}
+@media (min-width: 72em) {
+  .clp-hero .clp-content {
+    height: 70em;
+  }
+  .clp-hero h1 {
+    font-size: 68px;
+    font-size: 4.25rem;
+    max-width: 60%;
+  }
+  .clp-hero-quote {
+    max-width: 60%;
+    left: 20%;
+    margin-bottom: 100px;
+  }
+}
+
+.clp-wine {
+  background-color: #fffcf7;
+}
+.clp-wine .clp-content {
+  max-width: 90em;
+  margin: 0 auto;
+}
+.clp-wine .clp-figure {
+  background-color: #57080a;
+  text-align: center;
+  background-image: -webkit-linear-gradient( 90deg, #57080a 72%, #9d3129 72%);
+  background: linear-gradient(90deg, #57080a 72%, #9d3129 72%);
+}
+.clp-wine .clp-figure img {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 16px 0; 
+}
+.clp-section-text {
+  padding: 32px;
+}
+.clp-section-text h2 span {
+  display: block;
+}
+.clp-section-text p {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.clp-wine h2::before {
+  background-image: url('http://www.keithlaidlaw.com/trinchero/images/accent_01.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 2em; 
+  height: 3.5em;
+  margin: 16px 0;
+  content:"";
+}
+.clp-wine-head {
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 32px;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.clp-wine-subhead {
+  text-transform: uppercase;
+  font-size: 17.5px;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+.buynow-cta {
+  display: inline-block;
+  width: max-content;
+  text-align: center; /* for IE11 */
+  background: #5e1e20;
+  color: #faeddd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 1em 2.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  margin: 64px 0 16px;
+}
+.buynow-cta:hover,
+.buynow-cta:active,
+.buynow-cta:focus {
+  opacity: 0.8;
+}
+@media (min-width: 40em) {
+  .clp-wine .clp-section-text,
+  .clp-wine .clp-figure {
+    vertical-align: top;
+    width: 45%;
+  }
+  .clp-wine .clp-figure {
+    float:left;
+  }
+  .clp-wine .clp-section-text {
+    margin-left: 10%;
+    float:right
+  }
+  .clp-wine {
+    padding-bottom: 10% ;
+  }
+  .clp-wine .clp-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .clp-wine .clp-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 63em) {
+  .clp-wine .clp-figure,
+  .clp-wine .clp-section-text {
+    width: 33%;
+  }
+  .clp-wine .clp-section-text {
+    margin: 0 17%;
+  }
+}
+
+.clp-philosophy {
+  background-color: #fffcf7;
+}
+.clp-philosophy .clp-content {
+  max-width: 90em;
+  margin: 0 auto;
+}
+.clp-philosophy .clp-figure {
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.clp-philosophy .clp-figure img {
+  margin-top: -25%;
+}
+.clp-philosophy .clp-section-text {
+  padding: 32px;
+}
+.clp-philosophy-tag {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 17.5px;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+.clp-philosophy-tag::before {
+  background-image: url('http://www.keithlaidlaw.com/trinchero/images/accent_02.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 2em; 
+  height: 2.5em;
+  margin: 16px 0 0;
+  content:"";
+}
+.clp-philosophy-head {
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 32px;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.clp-philosophy p {
+  margin-bottom: 32px;
+}
+@media (min-width: 40em) {
+  .clp-philosophy .clp-section-text {
+    max-width: 38em;
+  }
+}
+@media (min-width: 55em) {
+  .clp-philosophy .clp-content {
+    padding: 0 32px;
+  }
+  .clp-philosophy .clp-section-text,
+  .clp-philosophy .clp-figure {
+    vertical-align: top;
+    width: 45%;
+  }
+  .clp-philosophy .clp-section-text {
+    float: left;
+    padding: 0 32px;
+    max-width: 100%;
+    margin-right: 10%
+  }
+  .clp-philosophy .clp-section-text P {
+    margin-bottom: 0;
+  }
+  .clp-philosophy .clp-figure {
+    height: auto;
+    padding-bottom: 0;
+    overflow: visible;
+    margin-right: -32px;
+    margin-bottom: -8px;
+    float: right;
+  }
+  .clp-philosophy .clp-figure img {
+    margin-top: 0;
+    max-height: 100%;
+  }
+  .clp-philosophy .clp-content {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+  }
+  .clp-philosophy .clp-section-text {
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 63em) {
+  .clp-philosophy .clp-section-text {
+    width: 35%;
+    margin: 0 10%;
+  }
+}
+@media (min-width: 75em) {
+  .clp-philosophy .clp-figure {
+    width: 40%;
+  }
+  .clp-philosophy .clp-section-text {
+    width: 33%;
+    margin: 0 13.5%;
+  }
+}
+.clp-footer { 
+  position: relative;
+  z-index: 1;
+}
+.clp-footer .clp-content {
+  max-width: 76em;
+  margin: 0 auto;
+}
+.clp-footer .clp-logo {
+  display: block;
+  margin: 38px 0 48px;
+  width: 100%;
+  max-width: 28em;
+}
+.clp-footer-head {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 17.5px;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+.clp-footer-contact {
+  vertical-align: top;
+  margin-right: 40px;
+  margin-bottom: 48px;
+}
+.clp-footer-contact-details,
+.clp-footer-contact a {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.clp-footer-contact a {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+a.text-link,
+a.text-link:visited {
+  color: #faeddd;
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+
+a.text-link:hover,
+a.text-link:active,
+a.text-link:focus {
+  padding-bottom: 0;
+  border-bottom: 1px solid #faeddd;
+}
+.clp-footer .separator {
+  margin: 0 .5em;
+}
+a.clp-makers-link {
+  text-transform: uppercase;
+}
+@media (min-width: 24em) {
+  .clp-footer-contact {
+    display: inline-block;
+  }
+}
+@media (min-width: 63em) {
+  .clp-footer-flex {
+    display: flex;
+    justify-content: space-between;  
+    align-items: flex-start;
+    align-items: start;
+  }
+  .clp-footer .clp-logo {
+    display: inline-block;
+  }
+  .clp-footer-contact {
+    margin: 32px 0 32px;
+  }
+  .clp-footer-contact:first-of-type {
+    margin: 32px 64px;
+  }
+  .clp-footer .clp-logo {
+    max-width: 32em;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+.clp-wine .clp-content:after,
+.clp-philosophy .clp-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
